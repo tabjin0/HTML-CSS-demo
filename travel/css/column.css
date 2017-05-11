@@ -1,0 +1,483 @@
+@charset "utf-8";
+
+#headline {
+	width: 100%;
+	min-width: 1263px;
+	height: 300px;
+	background: linear-gradient(to right bottom,rgba(0,0,0,0.7),rgba(0,0,0,0.0)), url(../img/headline.jpg) no-repeat center;
+}
+#headline .center {
+	width: 1263px;
+	height: 300px;
+	margin: 0 auto;/*控制居中，比较重要*/
+}
+#headline hgroup {
+	padding: 100px 0 0 50px;
+}
+#headline h2 {
+	/*color: #eee;*/
+	font-size: 36px;
+	letter-spacing: 1px;
+}
+#headline h3 {
+	/*color: #eee;*/
+	font-size: 20px;
+	letter-spacing: 1px;
+}
+
+
+/*container的css部分*/
+#container {
+	width: 1263px;
+	margin: 30px auto;
+}
+#container .sidebar {
+	width: 340px;/*需要微调*/
+	float: right;
+}
+#container .sidebox {
+	border: 1px solid #eee;
+	margin: 0 0 10px 0;/*下面空90px*/
+	text-align: center;
+}
+#container .sidebox h2 {
+	font-size: 20px;
+	font-weight: normal;
+	letter-spacing: 1px;
+	text-indent: 8px;
+	height:40px;
+	line-height: 40px;
+	background-color: #fafafa;
+	color: #666;
+	text-align: left;
+}
+
+
+/*记录块的css*/
+#container .tag {
+	padding: 10px 0;
+}
+/*将原本的a元素修改为li*/
+#container .tag li {
+	width: 100px;
+	height: 35px;
+	background-color: #eee;/*！因为a是一个内联元素，所以加背景色是有用的，但是加高度和宽度是没有用的，需要把它转换为内联区块*/
+	display: inline-block;/*因为li是一个区块元素，所以需要一个display:inline-block将他设置一个内联区块*/
+	line-height: 35px;/*设置行高*/
+	margin: 2px 0;/*上下空出2px*/
+	color: #999;
+	text-align: left;
+	text-indent: 8px;
+	/*本来这里是要居中的，但是sidebox其他区块也需要，所以直接在sidebox里面设置居中*/
+}
+#container .tag a {
+	display: block;
+	color: #999;
+}
+#container .tag a:hover {
+	background-color: #458b00;
+	color: #fff;
+}
+/*记录块的css*/
+
+
+/*附加的css*/
+#container figure {
+	display: inline-block;
+	padding: 4px;
+	color: #666;
+}
+#container .figure {
+	padding: 10px 0;
+}
+/*附加的css*/
+/*图文说明的css*/
+#container .introduce {
+	padding: 10px 0;
+}
+#container .introduce .trea1 {
+	background: #eee url(../img/trea1.png) no-repeat 10px center;
+}
+#container .introduce .trea2 {
+	background: #eee url(../img/trea2.png) no-repeat 10px center;
+}
+#container .introduce .trea3 {
+	background: #eee url(../img/trea3.png) no-repeat 10px center;
+}
+#container .introduce .trea4 {
+	background: #eee url(../img/trea4.png) no-repeat 10px center;
+}
+#container .introduce a {
+	width: 150px;
+	height: 40px;/*调整得到*/
+	background-color: #eee;/*！因为a是一个内联元素，所以加背景色是有用的，但是加高度和宽度是没有用的，需要把它转换为内联区块*/
+	display: inline-block;
+	line-height: 35px;/*设置行高*/
+	margin: 2px 0;/*上下空出2px*/
+	color: #999;
+	text-align: center;
+	
+	/*本来这里是要居中的，但是sidebox其他区块也需要，所以直接在sidebox里面设置居中*/
+}
+#container .introduce a:hover {
+	background-color: #458b00;
+	color: #fff;
+}
+/*图文说明的css*/
+
+#container .list {
+	width: 910px;/*需要微调*/
+	/*background-color: #ccc;*/
+	float: left;
+}
+#container .infor {
+	height: 45px;
+	line-height: 45px;
+	background-color: #eee;
+	margin: 0 0 20px 0;*//*figure*/
+}
+#container .information .left {
+	display: inline-block;
+	/*background-color: maroon;*/
+	float: left;
+}
+#container .information .left li {
+	display: inline-block;/*这里面有两个li，我需要把下面一个li移动到上面，将li这个区块元素设置成一个内联区块*/
+	/*background-color: #ccc;*/
+	width: 150px;
+	height: 43px;/*这里本来是和上面infor一样高的，为45px，但是这里因为要给贤惠特价 添加一个2px上边框，，所以这里的高度要缩减为43px*/
+	line-height: 45px;
+	text-align: center;
+}
+#container .information .left li:first-child {
+	background-color: #fff;/*将限时特价的背景色设置成#fff白色*/
+	border-top: 2px solid #458b00;/*给限时特价添加一个上边框，颜色为#458b00*/
+/*这里要注意添加的边框会给文字带来影响，上边框回事文字向下移动2px*/
+	position: relative;/*设置一个相对点，为了让限时特价左边显示一个左边框*/
+	left: 1px;
+}
+#container .information .left li a {
+	color: #666;
+	text-align: center;
+	display: block;
+}
+#container .information .right {
+	display: inline-block;
+	float: right;
+	padding: 0 20px 0 0;/*右边空20px*/
+}
+#container .information .right li {
+	display: inline-block;
+	
+	width: 60px;
+	height: 45px;
+	line-height: 45px;
+	text-align: center;
+
+}
+#container .information .right li a {
+	/*display: inline-block;*/
+	padding: 3px 8px; 
+	/*background-color: #458b00; */
+}
+#container .information .right a.selected,#container .right a:hover {
+	background-color: #458b00;
+	color: #fff;
+}
+#container .tour {
+	width: 908px;/*去掉外边框的2px*/
+	padding: 0;
+	/*background-color: #ccc;*/
+	margin: 0 0 20px 0;
+	border: 1px solid #eee;
+	position: relative;
+}
+#container .tour img {
+	float: left;
+}
+#container .tour figcaption {
+	width: 528px;/*去掉外边框的2px*/
+	height: 230px;
+	/*background-color: red;*/
+	float: right;
+}
+#container .tour hgroup {
+	width: 300px;
+}
+#container .tour h2 {
+	font-size: 24px;
+	color: #333;
+	font-weight: normal;
+	padding: 10px 0 10px 25px;
+}
+#container .tour h3 {
+	font-size: 16px;
+	color: #666;
+	line-height: 2;
+	font-weight: normal;
+	padding: 10px 0 10px 25px;
+}
+#container .tour mark {
+	background-color: #fff;
+	border: 1px solid #458b00;
+	border-radius: 4px;
+	padding: 0 5px;
+	color: #458b00;
+}
+#container .tour ol {
+	padding: 0 0 0 25px;
+	line-height: 1.5;
+	color: #666;
+}
+#container .tour .label {
+	position: absolute;
+	top : 55px;
+	right: 30px;
+}
+#container .tour .click {
+	font-size: 20px;
+	color: #f60;
+}
+#container .tour .click strong {
+	font-size: 36px;
+}
+#container .tour .click s{
+	font-size: 16px;
+	color: #999;
+}
+#container .tour .double {
+	padding: 10px 0;
+}
+/*双击按钮设置*/
+#container .tour .double a {
+	display: block;
+	width: 152px;
+	height: 40px;
+	line-height: 40px;
+	font-size: 20px;
+	color: #fff;
+	background-color: #f60;
+	text-align: center;
+	border-radius: 4px;
+}
+#container .tour .type {
+	width: 90px;
+	height: 25px;
+	background-color: #59b200;
+	line-height: 25px;
+	text-align: center;
+	color: #fff;
+	position: absolute;
+	top: 0px;
+	left: 0px;/*希望他在图片上而不是紧贴着边框，因为边框宽4px，所以这里不是0是4px*/
+}
+#container .tour .discount {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 52px;
+	height: 52px;
+	background: url(../img/disc.png) no-repeat;
+	/*transform: rotate(45deg);*/
+}
+#container .tour .discount span {
+	transform: rotate(45deg);/*这只对区块有效果，所以要将span修改成block*/
+	display: block;
+	width: 52px;
+	height: 52px;
+	padding: 5px 0 0 0;
+	text-indent: 7px;
+	font-size: 14px;
+	color: #ff7a4d;
+}
+#container .information .more,#container .scenery .more {
+	width: 200px;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	margin: 0 auto;
+	border: 1px solid #ccc;
+	background-color: #fafafa;
+	border-radius: 10px;
+	cursor: pointer;
+	font-size: 18px;
+	color: #666;
+}
+
+#container .tour footer {
+	width: 528px;
+	height: 30px;
+	line-height: 30px;
+	letter-spacing: 1px;
+	text-indent: 25px;
+	background-color: #fafafa;
+	position: absolute;
+	bottom: 0;
+}
+#container .tour time {
+	color: #458b00;
+}
+
+
+/*order.html的css*/
+#container .order,#container .scenery,#container .about {
+	color: #666;
+	font-size: 20px;
+}
+
+#container .order h2,#container .scenery h2,#container .about h2 {
+	height: 40px;
+	line-height: 40px;
+	border-bottom: 1px dashed #999;/*这里给h2添加一个下边框*/
+	padding: 0 0 15px 0;
+	cursor: pointer;
+	font-size: 30px;
+	font-weight: normal;
+}
+#container .order .type {
+	margin: 20px 0 10px 0;
+	font-size: 20px;
+}
+#container .order .type mark {
+	color: #fff;
+	background-color: #458b00;
+	padding: 5px 8px;
+	border-radius: 4px;
+	margin: 0 10px 0 16px;
+}
+
+#container .order .left {
+	width: 43%;
+	display: inline-block;
+}
+#container .order .right {
+	width: 43%;
+	display: inline-block;
+}
+#container .order .button {
+	width: 9%;
+	display: inline-block;
+}
+#container .order .button .submit {
+	display: block;
+	width: 90px;
+	height: 90px;
+	line-height: 90px;
+	font-size: 20px;
+	color: #fff;
+	background-color: #f60;
+	text-align: center;
+	border-radius: 4px;
+	border: none;
+	position: relative;
+	top: 8px;
+	cursor: pointer;
+}
+/*设置表单*/
+#container .order .form p {
+	line-height: 3;
+}
+#container .order .form input {
+	width: 250px;
+	height: 30px;
+	border: 1px solid #ccc;
+	background-color: #fff;
+	border-radius: 4px;
+	padding: 5px;
+	font-size: 18px;
+	color: #666;
+	margin: 0 0 0 16px;
+
+}
+
+
+#container .order .new {
+	margin: 20px 0 0 0;
+}
+#container .order .new ul {
+	margin: 20px 0 0 0;
+}
+/*控制li的稀疏*/
+#container .order .new li {
+	display: inline-block;
+	padding: 5px 10px;	
+}
+/*将“城市”左内边距设置为0*/
+#container .order .new li:first-child {
+	padding-left: 0;
+}
+#container .order .new li:nth-child(2) {
+	background-color: #458b00;
+	color: #fff;
+	border-radius: 4px;
+}
+
+#container .order table {
+	margin: 20px 0 0 0;
+	width: 100%;
+	border: 1px solid #ddd;
+	border-collapse: collapse;/*去掉双边框的填充*/
+}
+#container .order th {
+	border-bottom: 1px solid #ddd;
+	height: 50px;
+	line-height: 50px;
+}
+#container .order td {
+	height: 50px;
+	border-bottom: 1px solid #ddd;
+	text-align: center;
+}
+#container .order tr:nth-child(2n) {
+	background-color: #fafafa;
+}
+#container .order tr:hover {
+	background-color: #eee;
+}
+/*设置表格price颜色*/
+#container .new .price {
+	color: #f60;
+}
+#container .new .more {
+	color: #666;
+}
+#container .new .reserve {
+	display: inline-block;
+	width: 80px;
+	height: 35px;
+	line-height: 35px;
+	font-size: 20px;
+	color: #fff;
+	background-color: #f60;
+	text-align: center;
+	border-radius: 4px;
+}
+
+/*scenery.html*/
+#container .scenery figure {
+	border: 1px solid #ddd;
+	display: inline-block;/*1.将本来的区块改成内联*/
+	padding: 4px;/*1.添加一个4px的边框*/
+	border-radius: 4px;/*1.给这个边框设置圆角矩形*/
+	margin: 15px 5px 15px 0; /*4.9个figure居中之后外边距有点小，更改*/
+	width: 435px;/*6.防止figcaption的长度过长导致figure被撑开*/
+	text-align: left;/*因为设置.satisfied发现价格不是在左边，就把figcaption中的居左移过来，整体居左*/
+	position: relative;/*给左上角绿色标签设置相对点*/
+
+}
+#container .scenery figcaption {
+	text-align: center;
+	padding: 5px 0;
+}
+
+
+
+#container .about p {
+	line-height: 2;
+	margin: 20px 0;
+}
+#container .about address {
+	line-height: 1.6;
+	margin: 20px 0;
+	font-style: normal;
+}

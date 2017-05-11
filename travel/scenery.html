@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>jinboy</title>
+	<link rel="stylesheet" href="css/basic.css">
+	<link rel="stylesheet" href="css/column.css">
+</head>
+
+<!-- /*body,section,nav是需要标题的，吸收h1-h6的标题,但是如果随便加上标题可能破坏页面布局，可以用style="display:none"来解决，section必须要有一个标题，然而nav不是必须要有的-->
+<!-- div，header是不需要h1-h6标题的 -->
+<body>
+	<!-- <h1 style="display:none">我是主大纲</h1> -->
+	<!-- nav一般用来存放导航布局，下面有h2和div不是特别合理的，要用header来代替它 -->
+	<!-- <nav id="nav"> -->
+	<!-- <header id="nav"> -->
+	<header id="header"> <!--需要将id改成header，并且将之前所有#nav改成#header-->
+		<!-- <h2 style="display:none">网站导航</h2> -->
+		<div class="center">
+			<h1 class="logo">jinboy</h1>
+			<!--这个地方的h1标题将被body吸附，因为div，header是不需要标题的-->
+			<nav>
+				<h2 class="none">网站导航</h2><!--这个h2是会破坏布局的，需要定义一个class。none，通过css来display：none-->
+				<ul class="link">
+				<li><a href="index.html">首页</a></li>
+				<li ><a href="information.html">资讯</a></li>
+				<li><a href="order.html">订购</a></li>
+				<li class="active"><a href="scenery.html">欣赏</a></li>
+				<li><a href="about.html">简介</a></li>
+				</ul>
+			</nav>
+		</div>
+	<!-- 上面用div比用section更加好，section最好不用用于布局和css样式 -->
+	</header>
+
+	<div id="headline">
+		<div class="center">
+			<hgroup>
+				<h2>jinboy的第一个分页</h2>
+				<h3>这是一个分页介绍</h3>
+			</hgroup>
+			<!-- 有多个标题可以用hgroup来对标题进行规范 -->
+		</div>
+	</div>
+
+	<div id="container">
+		<aside class="sidebar">
+			<div class="sidebox memery">
+				<h2>记录</h2>
+				<div class="tag">
+					<ul>
+						<li><a href="###">A</a></li>
+						<li><a href="###">B</a></li>
+						<li><a href="###">C</a></li>
+						<li><a href="###">D</a></li>
+						<li><a href="###">E</a></li>
+						<li><a href="###">F</a></li>
+						<li><a href="###">G</a></li>
+						<li><a href="###">H</a></li>
+						<li><a href="###">I</a></li>
+						<li><a href="###">J</a></li>
+						<li><a href="###">K</a></li>
+						<li><a href="###">L</a></li>
+						<li><a href="###">M</a></li>
+						<li><a href="###">N</a></li>
+						<li><a href="###">O</a></li>
+						<li><a href="###">P</a></li>
+						<li><a href="###">Q</a></li>
+						<li><a href="###">R</a></li>
+						<li><a href="###">S</a></li>
+						<li><a href="###">T</a></li>
+						<li><a href="###">U</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="sidebox addition">
+				<h2>附加</h2>
+				<div class="figure">
+					<figure>
+						<img src="img/hot1.jpg" alt="图片1">
+						<figcaption>图片1</figcaption>
+					</figure>
+					<figure>
+						<img src="img/hot2.jpg" alt="图片2">
+						<figcaption>图片2</figcaption>
+					</figure>
+					<figure>
+						<img src="img/hot3.jpg" alt="图片3">
+						<figcaption>图片3</figcaption>
+					</figure>
+					<figure>
+						<img src="img/hot4.jpg" alt="图片4">
+						<figcaption>图片4</figcaption>
+					</figure>
+					<figure>
+						<img src="img/hot5.jpg" alt="图片5">
+						<figcaption>图片5</figcaption>
+					</figure>
+					<figure>
+						<img src="img/hot6.jpg" alt="图片6">
+						<figcaption>图片6</figcaption>
+					</figure>
+					<figure>
+						<img src="img/hot7.jpg" alt="图片7">
+						<figcaption>图片7</figcaption>
+					</figure>
+					<figure>
+						<img src="img/hot8.jpg" alt="图片8">
+						<figcaption>图片8</figcaption>
+					</figure>
+				</div>
+			</div>
+			<div class=" sidebox introduce">
+				<h2>图文说明</h2>
+				<div>
+					<a href="###" class="trea1">说明1</a>
+					<a href="###" class="trea2">说明2</a>
+					<a href="###" class="trea3">说明3</a>
+					<a href="###" class="trea4">说明4</a>
+				</div>
+			</div>
+		</aside>
+		
+
+		<div class="list scenery">
+			<section>
+				<h2>欣赏</h2>
+				<figure>
+					<img src="img/s1.jpg" alt="图片1">
+					<figcaption>图片1</figcaption>
+				</figure>
+				<figure>
+					<img src="img/s2.jpg" alt="图片1">
+					<figcaption>图片2</figcaption>
+				</figure>
+				<figure>
+					<img src="img/s3.jpg" alt="图片1">
+					<figcaption>图片3</figcaption>
+				</figure>
+				<figure>
+					<img src="img/s4.jpg" alt="图片1">
+					<figcaption>图片4</figcaption>
+				</figure>
+				<figure>
+					<img src="img/s5.jpg" alt="图片1">
+					<figcaption>图片5</figcaption>
+				</figure>
+				<figure>
+					<img src="img/s6.jpg" alt="图片1">
+					<figcaption>图片6</figcaption>
+				</figure>
+				<figure>
+					<img src="img/s7.jpg" alt="图片1">
+					<figcaption>图片7</figcaption>
+				</figure>
+				<figure>
+					<img src="img/s8.jpg" alt="图片1">
+					<figcaption>图片8</figcaption>
+				</figure>
+			</section>
+			<div class="more">loading more~~</div>
+		</div>
+	</div>
+
+	<footer id="footer">
+		<div class="top">
+			<div class="block left">
+				<h2>作者</h2>
+				<hr>
+				<ul>
+					<li>jinboy</li>
+					<li>dingdinggirl</li>
+					<li>jd</li>
+				</ul>
+			</div>
+			<div class="block center">
+				<h2>时间地点</h2>
+				<hr>
+				<ul>
+					<li>1</li>
+					<li>2</li>
+					<li>3</li>
+				</ul>
+			</div>
+			<div class="block right">
+				<h2>mail me !</h2>
+				<hr>
+				<ul>
+					<li>529194627@qq.com</li>
+					<li>zjdefine@163.com</li>
+				</ul>
+			</div>
+			<!-- class里面用block left一个是为了方便css比如三个div样式一样一个block指明，但是如果单个微调就不一样，要css中标明block left具体 -->
+		</div>
+		<div class="bottom">powered by &copy jinboy</div>
+	</footer>
+</body>
+</html>

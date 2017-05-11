@@ -1,0 +1,160 @@
+@charset "utf-8";
+
+
+
+#search {
+	width: 100%;
+	min-width: 1263px;/*在本来有自适应width为100%的地方加一个最小宽度，保证图片不糊出现拉动滚动条有留白的情况*/
+	height: 600px;
+	/*background: url(../img/search.jpg) no-repeat center;*/
+	background-image: url(../img/search.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	position: relative;/*设置一个相对点，为下面.center定位做准备*/
+}
+
+#search .center {
+	height: 60px;
+	width: 600px;
+	background-color: #000;
+	position: absolute;/*设置一个绝对点*/
+	top: 50%;
+	left: 50%;/*两个50%把.center以左上角为起始点定位，下面通过margin来调整*/
+	margin: -30px 0 0 -300px;/*外边框设置成.center的height和width的一半*/
+	opacity: 0.5;/*透明化*/
+	border-radius: 10px;/*给搜索框设置一个圆角*/
+}
+
+#search .search {
+	width: 446px;
+	height: 52px;
+	background-color: #fff; 
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -27px 0 0 -296px;/*外边框设置成.search的height和width的一半，先是-233px，然后改成-296px*/
+	color: #666;
+	border: 1px solid #666;
+	border-radius: 10px;
+	font-size: 24px;
+	padding: 0 10px;
+    outline: none;/*取消有的浏览器点击input框产生的外边框*/
+}
+
+#search .button {
+	width: 120px;
+	height: 52px;
+	background-color: #fff; 
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -27px 0 0 175px;/*单纯是60px是有问题的，在input的中间，需要更改-60px，改成175px向右移动*/
+	color: #666;
+	border: 1px solid #666;
+	border-radius: 10px;
+	font-size: 24px;
+    outline: none;
+    cursor: pointer;
+}
+
+#tour {
+	width: 1263px;
+	height: 1150px;
+	/*background-color: #ccc;*//*5.区块一般设置一个背景色方便观察制作，但不是最终需要的，所以省去*/
+	margin: 30px auto;/*开始上下边距为0，左右边距居中，后改成30px*/
+	text-align: center;/*3.本来加进去9个figure，但他们都是居中的，在这里设置居中给figure*/
+}
+
+#tour .center {
+	/*text-align: center;*//*做到这里和之前设置h2的时候设置重复，所以省去*/
+}
+
+#tour .center h2 {
+	font-size: 45px;
+	letter-spacing: 2px;
+	color: #666;
+	margin: 10px 0;/*上下空出10px，左右不动*/
+}
+
+#tour .center p {
+	color: #666;
+	margin: 20px 0;
+}
+
+/*设置图片*/
+#tour figure {
+	border: 1px solid #ddd;
+	display: inline-block;/*1.将本来的区块改成内联*/
+	padding: 4px;/*1.添加一个4px的边框*/
+	border-radius: 4px;/*1.给这个边框设置圆角矩形*/
+	margin: 15px 12px;/*4.9个figure居中之后外边距有点小，更改*/
+	width: 380px;/*6.防止figcaption的长度过长导致figure被撑开*/
+	text-align: left;/*因为设置.satisfied发现价格不是在左边，就把figcaption中的居左移过来，整体居左*/
+	position: relative;/*给左上角绿色标签设置相对点*/
+
+}
+
+#tour figure img {
+	vertical-align: middle;/*2.将本来图片下方一小块白色区域去掉*/
+}
+
+/*设置图片下面文字*/
+#tour figure figcaption {
+	/*text-align: left;*//*因为设置.satisfied发现价格不是在左边，就把figcaption中的居左移到figure，整体居左*/
+	color: #777;
+	font-size: 14px;
+	letter-spacing: 1px;
+	line-height: 2.5;
+	padding: 7px 0 5px 0;
+}
+
+#tour figure .info {
+	padding: 5px 0 0 0;
+}
+
+/*设施图片标题*/
+#tour .title {
+	color: #333;
+	font-weight: normal;
+}
+
+/*设置满意度*/
+#tour .satisfied {
+	float: right;/*设置后会发现价格不是希望的在左边，现在将figcaption中设置的居左移动到*/
+	font-size: 13px;
+	color: #999;
+	font-style: normal;
+	/*background-color: red;*//*测试是什么区域，从背景看出来是个内联*/
+	position: relative;
+	top: 5px;
+	right: 5px;
+}
+
+/*设置图片价格*/
+#tour .price {
+	color: #f60;
+	font-size: 14px;
+
+}
+
+#tour .price strong {
+	font-size: 20px;
+	letter-spacing:  1px;
+}
+
+/*设置左上角标签*/
+#tour .type {
+	width: 90px;
+	height: 25px;
+	background-color: #59b200;
+	line-height: 25px;
+	text-align: center;
+	color: #fff;
+	position: absolute;
+	top: 4px;
+	left: 4px;/*希望他在图片上而不是紧贴着边框，因为边框宽4px，所以这里不是0是4px*/
+}
+
+
+
+八分四十秒

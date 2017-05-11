@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>jinboy</title>
+	<link rel="stylesheet" href="css/basic.css">
+	<!-- 防止css过于重复 -->
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<!-- /*body,section,nav是需要标题的，吸收h1-h6的标题,但是如果随便加上标题可能破坏页面布局，可以用style="display:none"来解决，section必须要有一个标题，然而nav不是必须要有的-->
+<!-- div，header是不需要h1-h6标题的 -->
+<body>
+	<!-- <h1 style="display:none">我是主大纲</h1> -->
+	<!-- nav一般用来存放导航布局，下面有h2和div不是特别合理的，要用header来代替它 -->
+	<!-- <nav id="nav"> -->
+	<!-- <header id="nav"> -->
+	<header id="header"> <!--需要将id改成header，并且将之前所有#nav改成#header-->
+		<!-- <h2 style="display:none">网站导航</h2> -->
+		<div class="center">
+			<h1 class="logo">jinboy</h1>
+			<!--这个地方的h1标题将被body吸附，因为div，header是不需要标题的-->
+			<nav>
+				<h2 class="none">网站导航</h2><!--这个h2是会破坏布局的，需要定义一个class。none，通过css来display：none-->
+				<ul class="link">
+				<li class="active"><a href="index.html">首页</a></li>
+				<li><a href="information.html">资讯</a></li>
+				<li><a href="order.html">订购</a></li>
+				<li><a href="scenery.html">欣赏</a></li>
+				<li><a href="about.html">简介</a></li>
+				</ul>
+			</nav>
+		</div>
+	<!-- 上面用div比用section更加好，section最好不用用于布局和css样式 -->
+	</header>
+
+
+	<!--  search搜索框 -->
+
+	<div id="search">
+		<div class="center"></div>
+		<input type="text" class="search" placeholder="jinboy的主页详情">
+		<button class="button">搜索</button>
+	</div>
+	<div id="tour">
+		<section class="center">
+			<h2>jinboy and his little princess</h2>
+			<p>照片 地点 时间</p>
+		</section>
+		<figure>
+			<img src="img/tour1.jpg" alt="图片1">
+			<figcaption><strong class="title">&lt;图片1&gt;</strong> figure元素标题1
+			<!-- c默认居中，css中设置不居中 -->
+				<div class="info"></div>
+				<div>
+					<em class="satisfied">满意度 77%</em>
+					<span class="price"> <strong>888</strong></span>
+				</div>
+				<div class="type">国内长线</div>
+			</figcaption>
+		</figure>
+		<figure>
+			<img src="img/tour2.jpg" alt="图片2">
+			<figcaption><strong class="title">&lt;图片2&gt;</strong> figure元素标题2
+			<!-- c默认居中，css中设置不居中 -->
+				<div class="info"></div>
+				<div>
+					<em class="satisfied">满意度 88%</em>
+					<span class="price"> <strong>888</strong></span>
+				</div>
+				<div class="type">国内短途</div>
+			</figcaption>
+		</figure>
+		<figure>
+			<img src="img/tour3.jpg" alt="图片3">
+			<figcaption><strong class="title">&lt;图片3&gt;</strong> figure元素标题3
+			<!-- c默认居中，css中设置不居中 -->
+				<div class="info"></div>
+				<div>
+					<em class="satisfied">满意度 77%</em>
+					<span class="price"> <strong>888</strong></span>
+				</div>
+				<div class="type">国内长线</div>
+			</figcaption>
+		</figure>
+		<figure>
+			<img src="img/tour4.jpg" alt="图片4">
+			<figcaption><strong class="title">&lt;图片4&gt;</strong> figure元素标题4
+			<!-- c默认居中，css中设置不居中 -->
+				<div class="info"></div>
+				<div>
+					<em class="satisfied">满意度 77%</em>
+					<span class="price"> <strong>888</strong></span>
+				</div>
+				<div class="type">国内长线</div>
+			</figcaption>
+		</figure>
+		<figure>
+			<img src="img/tour5.jpg" alt="图片5">
+			<figcaption><strong class="title">&lt;图片5&gt;</strong> figure元素标题5
+			<!-- c默认居中，css中设置不居中 -->
+				<div class="info"></div>
+				<div>
+					<em class="satisfied">满意度 77%</em>
+					<span class="price"><strong>888</strong></span>
+				</div>
+				<div class="type">国内长线</div>
+			</figcaption>
+		</figure>
+		<figure>
+			<img src="img/tour6.jpg" alt="图片6">
+			<figcaption><strong class="title">&lt;图片6&gt;</strong> figure元素标题6
+		<!-- c默认居中，css中设置不居中 -->
+				<div class="info"></div>
+				<div>
+					<em class="satisfied">满意度 77%</em>
+					<span class="price"><strong>888</strong></span>
+				</div>
+				<div class="type">国内长线</div>
+			</figcaption>
+		</figure>
+		<figure>
+			<img src="img/tour7.jpg" alt="图片7">
+			<figcaption><strong class="title">&lt;图片7&gt;</strong> figure元素标题7
+				<!-- c默认居中，css中设置不居中 -->
+				<div class="info"></div>
+				<div>
+					<em class="satisfied">满意度 77%</em>
+					<span class="price"><strong>888</strong></span>
+				</div>
+				<div class="type">国内长线</div>
+			</figcaption>
+		</figure>
+		<figure>
+			<img src="img/tour8.jpg" alt="图片8">
+			<figcaption><strong class="title">&lt;图片8&gt;</strong> figure元素标题8
+			<!-- c默认居中，css中设置不居中 -->
+				<div class="info"></div>
+				<div>
+					<em class="satisfied">满意度 77%</em>
+					<span class="price"><strong>888</strong></span>
+				</div>
+				<div class="type">国内长线</div>
+			</figcaption>
+		</figure>
+		<figure>
+			<img src="img/tour9.jpg" alt="图片9">
+			<figcaption><strong class="title">&lt;图片9&gt;</strong> figure元素标题1
+				<!-- c默认居中，css中设置不居中 -->
+				<div class="info"></div>
+				<div>
+					<em class="satisfied">满意度 77%</em>
+					<span class="price"><strong>888</strong></span>
+				</div>
+				<div class="type">国内长线</div>
+			</figcaption>
+		</figure>
+		
+		<!-- 一下子9个figure溢出div，因为figure也是有外边距的，在css里面body，将内外边距设置成0，但是这九个figure又是居左的，在#tour里面text-align设置居中 -->
+	</div>
+
+
+
+	<footer id="footer">
+		<div class="top">
+			<div class="block left">
+				<h2>作者</h2>
+				<hr>
+				<ul>
+					<li>jinboy</li>
+					<li>dingdinggirl</li>
+					<li>jd</li>
+				</ul>
+			</div>
+			<div class="block center">
+				<h2>时间地点</h2>
+				<hr>
+				<ul>
+					<li>1</li>
+					<li>2</li>
+					<li>3</li>
+				</ul>
+			</div>
+			<div class="block right">
+				<h2>mail me !</h2>
+				<hr>
+				<ul>
+					<li>529194627@qq.com</li>
+					<li>zjdefine@163.com</li>
+				</ul>
+			</div>
+			<!-- class里面用block left一个是为了方便css比如三个div样式一样一个block指明，但是如果单个微调就不一样，要css中标明block left具体 -->
+		</div>
+		<div class="bottom">powered by &copy jinboy</div>
+	</footer>
+</body>
+</html>

@@ -1,0 +1,133 @@
+@charset "utf-8";
+
+body,h1,h2,h3,ul,ol,p,figure {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: #fff;
+	font-family: "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei UI","Microsoft YaHei",SimHei,"宋体",simsun,sans-serif;
+}
+ul,ol {
+	list-style: outside none none;
+}
+
+a {
+	text-decoration: none;/*取消掉超链接默认的下划线*/
+}
+
+.none {
+	display: none;
+}
+
+#header {
+	width: 100%;
+	min-width: 1263px;
+	height: 70px;
+	background-color: #333;
+	box-shadow: 0 11px 10px rgba(0,0,0,0.3);
+	position: relative;/*为了布局设置一个相对点*/
+	z-index: 9999;/*层次提高*/
+	
+}
+
+#header section.center {
+	width: 1263px;
+	height: 70px;
+	margin: 0 auto;
+}
+
+#header .logo {
+	width: 240px;
+	height: 70px;
+	background-image: url(../img/logo.jpg);
+	text-indent: -9999px;/*首行缩进，可以有负值*/
+	float: left;
+}
+
+#header .link {
+	/*background-color: red;*/
+	width: 650px;/*这个宽度是5个120px宽的li加上一个50px，想要的效果是ul不要看上去那么靠右*/
+	color: #eee;/*淡灰色*/
+	height:  70px;
+	float: right;/*把ul向右浮动使ul到右边上层*/
+	line-height: 70px;
+	
+}
+
+#header .link li {
+	/*height:  70px;*/
+	width: 120px;
+	text-align: center;
+	float: left;/*把li向左浮动上去然后再把h1左浮动*/
+}
+
+#header .link a {
+	color: #eee;/*将随机的超链接默认颜色更改成和li原本颜色一样*/
+	/*background-color: green;*//*查看a元素区域大小*/
+	display: block;/*a本来是一个行内元素，现在将它设置成一个区块元素，使得鼠标可选择区域更大一点*/
+}
+
+#header .link a:hover,
+#header .active a{
+	background-color: #000;
+}/*鼠标悬停效果*//*后面一个是默认选中active*/
+
+
+
+
+
+#footer {
+	height: 360px;
+	background-color: #222;
+	clear: both;/*清理浮动*/
+	margin: 20px 0 0 0;/*本来不设置中间container的高度，由于footer与之靠太近，所以将footer下调20px，但这个不行是因为clear：both将margin也清除了*/
+	position: relative;/*由于margin不能用，现在可以设置相对定位点来控制和之前位置的相对距离，尝试可行*/
+	top: 20px;
+
+}
+#footer .top {
+	width: 1263px;
+	height: 281px;/*bottom多了一个1px的上边距*/
+	/*background-color: red;*/
+	margin: 0 auto;
+	text-align: center;/*居中*/
+}
+
+#footer .block {
+	width: 410px;
+	height: 280px;
+	/*background-color: red;*/
+	display: inline-block;/*本来的div改成内联式*/
+	text-align: left;
+	color: #ccc;
+	vertical-align: top;/*防止block里面元素掉落*/
+}
+
+#footer h2 {
+	font-size: 24px;
+	font-weight: normal;
+	padding: 20px 0 0 20px;/*上右下左*/
+}
+
+/*h2下面的水平线*/
+#footer hr {
+	width: 90%;
+	border: 1px dashed #333;
+}
+
+#footer ul {
+	font-size: 18px;
+	color: #777;
+	text-indent: 20px;/*首行缩进*/
+	line-height: 2;
+}
+#footer .bottom {
+	height: 80px;
+	line-height: 80px;
+	text-align: center;
+	color: #777;
+	background-color: #000;
+	border-top:1px solid #444;
+}
